@@ -10,7 +10,7 @@ class TrackList extends Component {
     render() {
         return (
             <div className="TrackList"> 
-           <Track />
+           <Track onAdd={this.props.onAdd}/>
             </div>
         );
     }

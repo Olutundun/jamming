@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import "./Track.css";
 
 class Track extends Component {
+  constructor(props) {
+    super(props)
+    this.addTrack = this.addTrack.bind(this);
+  }
+
   renderAction() {
     if (this.props.isRemoval) {
       return (
@@ -9,9 +14,14 @@ class Track extends Component {
       )
     } else {
       return (
-        <button className="Track-action">+</button>
+        <button onClick={this.addTrack} className="Track-action">+</button>
       )
     }
+  }
+
+  addTrack() {
+    //add to the playlist
+    this.props.track(this.props.onAdd)
   }
 
   render() {

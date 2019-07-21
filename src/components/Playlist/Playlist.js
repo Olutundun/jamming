@@ -3,12 +3,14 @@ import "./Playlist.css";
 import Tracklist from "../TrackList/TrackList";
 
 class Playlist extends Component {
-  state = {}
+  constructor(props) {
+    super(props)
+  }
   render() {
     return (
       <div className="Playlist">
         <input defaultValue={'New Playlist'} />
-        <Tracklist />
+        <Tracklist tracks={this.props.playlistTracks}/>
         <button className="Playlist-save">SAVE TO SPOTIFY</button>
       </div>
     );

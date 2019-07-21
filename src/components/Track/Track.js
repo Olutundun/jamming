@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import "./Track.css";
 
 class Track extends Component {
-
   renderAction() {
     if (this.props.isRemoval) {
       return (
@@ -19,8 +18,8 @@ class Track extends Component {
     return (
       <div className="Track">
         <div className="Track-information">
-          <h3>{this.props.track.name}</h3>
-          <p>{this.props.track.artist} | {this.props.track.album}</p>
+          <h3></h3>
+          <p> | </p>
         </div>
         <button onClick={this.renderAction} className="Track-action"></button>
       </div>

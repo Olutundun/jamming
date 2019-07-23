@@ -10,7 +10,7 @@ class TrackList extends Component {
     render() {
         return (
             <div className="TrackList"> 
-           <Track onAdd={this.props.onAdd}/>
+           <Track onRemove={this.props.removeTrack} isRemoval={this.props.isRemoval} onAdd={this.props.onAdd}/>
             </div>
         );
     }

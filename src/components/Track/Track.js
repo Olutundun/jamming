@@ -24,9 +24,9 @@ class Track extends Component {
     //add to the playlist
     this.props.track(this.props.onAdd)
   }
- 
+
   removeTrack() {
-    this.props.onRemove(this.props.track) 
+    this.props.onRemove(this.props.track)
   }
 
   render() {

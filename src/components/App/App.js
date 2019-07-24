@@ -21,6 +21,7 @@ class App extends Component {
     this.removeTrack = this.removeTrack.bind(this)
     this.updatePlaylistName = this.updatePlaylistName.bind(this)
     this.savePlaylist = this.savePlaylist.bind(this)
+    this.search = this.search.bind(this)
   }
   addTrack(track) {
     if (this.state.playlistTracks.find(savedTrack => savedTrack.id === track.id)) {
@@ -52,13 +53,17 @@ class App extends Component {
   savePlaylist() {
     
   }
+
+  search() {
+   //accepts a search term and logs it to the console/link to API
+  }
   render() {
     return (
       <div className="App">
         <div>
           <h1>Ja<span className="highlight">mm</span>ing</h1>
           <div className="App">
-            <SearchBar />
+            <SearchBar onSearch={this.search}/>
             <div className="App-playlist">
               <SearchResults onAdd={this.addTrack} searchResults={this.state.searchResults} />
               <Playlist onSave={this.savePlaylist} onNameChange={this.updatePlaylistName} onRemove={this.removeTrack} playlistName={this.state.playlistName} playlistTracks={this.state.playlistTracks} />
